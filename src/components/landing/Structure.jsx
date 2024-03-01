@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Toaster, toast } from 'sonner'
 
 const Structure = () => {
 
@@ -154,26 +154,17 @@ const Structure = () => {
 
                         className="ring-1 lg:row-span-2 flex flex-col justify-between group hover:ring-primary/10 dark:hover:ring-white/20 duration-300 h-full dark:ring-white/10 ring-primary/5 lg:row-start-2 md:grid-cols-2 md:grid lg:gap-0 md:items-center md:gap-12 lg:grid-cols-none lg:col-start-2 lg:col-span-2 rounded-3xl p-8 bg-white dark:bg-secondary shadow-xl dark:shadow-thick"
                     >
-                        {/* <div>
+                        <div>
                             <p
-                                className="ext-xl tracking-tight font-medium text-primary dark:text-white md:text-6xl"
+                                className="text-xl tracking-tight font-medium text-primary dark:text-white md:text-6xl"
                             >
-                                Monomod
+                                My Tech Stack
                             </p>
-                            <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400">
-                                Design & development subscriptions htmlFor startups.
-                                <br />
-                                <br />
-                                Monomod streamlines the design process with a fixed monthly rate
-                                and limitless design requests. Say goodbye to phone calls and
-                                extensive contracts; reach out to Monomod directly at any time.
-                                Embrace flexibility, pause or terminate your subscription whenever
-                                you need.
-                            </p>
-                        </div> */}
+
+                        </div>
                         <div className="mt-8">
                             <img
-                                src="/images/monomod.png"
+                                src="/techstack.png"
                                 className="rounded-2xl group-hover:ring-white/20 duration-300 invert dark:invert-0 aspect-[4/4] bg-primary/5 dark:bg-primary ring-1 ring-white/10  object-cover"
                                 alt=""
                             />
@@ -188,9 +179,8 @@ const Structure = () => {
                             >
                                 Grab my résumé!
                             </p>
-                            <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-400 md:max-w-xs lg:max-w-none">
-                                Unlock the doors to explore the rich tapestry of my professional
-                                journey and accomplishments.
+                            <p className="mt-4 text-xl text-zinc-500 dark:text-zinc-400 md:max-w-xs lg:max-w-none">
+                                Open the doors to discover my professional journey and achievements.
                             </p>
                         </div>
                         <div className="w-full mt-8 md:max-w-xs lg:max-w-none">
@@ -299,7 +289,7 @@ const Structure = () => {
                                         src="../../../appwrite.svg" alt="" />
                                     <span className="ml-2.5"> Appwrite</span>
                                 </div>
-                               
+
 
                             </div>
                             <div className="flex flex-wrap mt-2 ">
@@ -326,12 +316,14 @@ const Structure = () => {
 
                             </div>
                             <p
-                                className="ext-xl tracking-tight font-medium text-primary dark:text-white md:text-6xl mt-6"
+                                className="ext-xl tracking-tight font-medium 
+                                hover:underline
+                                text-primary dark:text-white md:text-6xl mt-6"
                             >
                                 FlashBlogs
                             </p>
                             <p className="mt-7 text-sm text-zinc-500 dark:text-zinc-400 font-light">
-                            Introducing FlashBlogs, a dynamic blog website that embodies seamless user interaction and efficient content management. Developed using React, Redux, and JavaScript, this platform boasts a sleek design crafted with Tailwind CSS for optimal responsiveness. Users can enjoy advanced text formatting options, including bold, italic, size, and color, while benefiting from user authentication features for secure login and logout experiences. <br/> <br/>Leveraging Appwrite for backend support ensures smooth file handling, while React Hook Form enhances form efficiency. With CRUD operations enabled, users can effortlessly create, read, update, and delete their posts, fostering an intuitive and engaging blogging experience.
+                                Introducing FlashBlogs, a dynamic blog website that embodies seamless user interaction and efficient content management. Developed using React, Redux, and JavaScript, this platform boasts a sleek design crafted with Tailwind CSS for optimal responsiveness. Users can enjoy advanced text formatting options, including bold, italic, size, and color, while benefiting from user authentication features for secure login and logout experiences. <br /> <br />Leveraging Appwrite for backend support ensures smooth file handling, while React Hook Form enhances form efficiency. With CRUD operations enabled, users can effortlessly create, read, update, and delete their posts, fostering an intuitive and engaging blogging experience.
                             </p>
                         </div>
                     </a>
@@ -344,27 +336,20 @@ const Structure = () => {
                             <p
                                 className="text-xl tracking-tight font-medium text-primary dark:text-white md:text-6xl"
                             >
-                                Subscribe <span className="lg:block">to my newsletter</span>
+                                Wanna check out<span className="lg:block">a cool component?</span>
                             </p>
-                            <form className="mt-6 sm:flex w-full lg:max-w-sm mx-auto">
-                                <label htmlFor="email-address" className="sr-only">Email address</label>
-                                <input
-                                    type="email"
-                                    name="email-address"
-                                    id="email-address"
-                                    autoComplete="email"
-                                    required=""
-                                    className="block w-full h-12 px-4 py-2 text-sm text-zinc-500 bg-zinc-100 dark:bg-tertiary ring-1 dark:ring-white/10 ring-primary/5 rounded-lg appearance-none focus:ring-white/20 placeholder-zinc-400 focus:border-zinc-300 focus:bg-primary focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                                    placeholder="Enter your email"
-                                />
+                            <div className="mt-10 justify-center sm:flex w-full lg:max-w-sm mx-auto">
+
                                 <div className="mt-4 sm:ml-2 sm:mt-0 sm:flex-shrink-0">
+                                    <Toaster />
+
                                     <button
-                                        type="submit"
+                                        onClick={() => toast.success("You're awesome!")}
                                         className="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:bg-white dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
-                                    >Subscribe</button
-                                    >
+                                    >Click here
+                                    </button>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -378,22 +363,20 @@ const Structure = () => {
                         <div className="md:grid md:grid-cols-2 gap-6 lg:grid-cols-1">
                             <div className="mt-4">
                                 <p className="text-sm text-pink-500 dark:text-pink-400">
-                                    "Big fan of your themes. They're well-organized, look clean, and
-                                    are fast."
+                                    "As a great designer, he crafts awesome animations that are eye-pleasing and best aligned."
                                 </p>
                                 <p className="text-xs mt-2 text-zinc-500">
-                                    <span className="block text-xs">Kevin Focke</span>
-                                    <span className="block text-xs"> Developer</span>
+                                    <span className="block text-xs">Jagjeet</span>
+                                    <span className="block text-xs"> Musician</span>
                                 </p>
                             </div>
                             <div className="mt-4">
                                 <p className="text-sm text-orange-500 dark:text-orange-300">
-                                    "Amazing resource using @astrodotbuild and @tailwindcss! I got it
-                                    a week ago and have found the contents really useful. 5/5
+                                "If you want complex functionality with great performance, he's the guy for you."
                                 </p>
                                 <p className="text-xs mt-2 text-zinc-500">
-                                    <span className="block text-xs">Alonso</span>
-                                    <span className="block text-xs"> Entrepreneur</span>
+                                    <span className="block text-xs">Arpita</span>
+                                    <span className="block text-xs"> Developer</span>
                                 </p>
                             </div>
                         </div>
