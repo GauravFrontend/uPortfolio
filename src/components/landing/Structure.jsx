@@ -4,10 +4,10 @@ import { Toaster, toast } from 'sonner'
 const Structure = () => {
 
     const onButtonClick = () => {
-        const pdfUrl = "../../../GAURAV_SHARMA_RESUME.pdf";
+        const pdfUrl = "../../../Gaurav_Sharma_Frontend_2Y.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
-        link.download = "GAURAV_SHARMA_RESUME.pdf";
+        link.download = "Gaurav_Sharma_Frontend_2Y.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -185,7 +185,7 @@ const Structure = () => {
                         </div>
                         <div className="w-full mt-8 md:max-w-xs lg:max-w-none">
                             <button
-                                href="../../../GAURAV_SHARMA_RESUME.pdf"
+                                href="../../../Gaurav_Sharma_Frontend_2Y.pdf"
                                 onClick={onButtonClick}
                                 type="button"
                                 className="text-sm py-2 w-full px-4 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:bg-white dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
